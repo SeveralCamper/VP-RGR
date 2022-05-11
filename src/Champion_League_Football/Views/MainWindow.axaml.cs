@@ -1,4 +1,5 @@
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 
 namespace Champion_League_Football.Views
 {
@@ -7,6 +8,11 @@ namespace Champion_League_Football.Views
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void HandlerOnClick(object sender, RoutedEventArgs eventHandler)
+        {
+            this.FindControl<TextBox>("TextBox1").Text = "Button Clicked";
         }
     }
 }
