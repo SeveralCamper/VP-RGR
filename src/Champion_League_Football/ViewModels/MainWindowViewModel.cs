@@ -7,7 +7,7 @@ namespace Champion_League_Football.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        string _text1;
+        string _text1 = "Default";
 
         public MainWindowViewModel()
         {

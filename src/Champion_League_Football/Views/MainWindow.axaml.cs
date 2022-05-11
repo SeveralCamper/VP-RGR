@@ -12,7 +12,7 @@ namespace Champion_League_Football.Views
 
         private void HandlerOnClick(object sender, RoutedEventArgs eventHandler)
         {
-            this.FindControl<TextBox>("TextBox1").Text = "Button Clicked";
+           this.FindControl<TextBox>("TextBox1").Text = "Button Clicked";
         }
     }
 }
