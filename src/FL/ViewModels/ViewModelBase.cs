@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Champion_League_Football.ViewModels
+namespace FL.ViewModels
 {
     public class ViewModelBase : ReactiveObject
     {

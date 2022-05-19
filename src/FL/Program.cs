@@ -2,9 +2,8 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.ReactiveUI;
 using System;
-using Microsoft.Data.Sqlite;
 
-namespace Champion_League_Football
+namespace FL
 {
     internal class Program
     {

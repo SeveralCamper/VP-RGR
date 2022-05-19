@@ -1,9 +1,9 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using Champion_League_Football.ViewModels;
+using FL.ViewModels;
 using System;
 
-namespace Champion_League_Football
+namespace FL
 {
     public class ViewLocator : IDataTemplate
     {

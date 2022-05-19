@@ -1,10 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using Champion_League_Football.ViewModels;
-using Champion_League_Football.Views;
+using FL.ViewModels;
+using FL.Views;
 
-namespace Champion_League_Football
+namespace FL
 {
     public partial class App : Application
     {
