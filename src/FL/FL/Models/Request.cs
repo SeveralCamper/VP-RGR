@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 
-namespace FL.Models
+namespace CursWorkAvalonia.Models
 {
-    public class Request
+    public class Request : INotifyPropertyChanged
     {
         private string _name;
         public string Name

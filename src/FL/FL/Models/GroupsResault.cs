@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FL
+namespace CursWorkAvalonia
 {
     public partial class GroupsResault
     {
@@ -16,6 +16,5 @@ namespace FL
         public long? GaBallsConceded { get; set; }
         public long? GdAccountDifference { get; set; }
         public long? PtsPoints { get; set; }
-        public string? GroupId { get; set; }
     }
 }

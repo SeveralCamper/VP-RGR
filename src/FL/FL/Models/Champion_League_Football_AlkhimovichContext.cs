@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace FL
+namespace CursWorkAvalonia
 {
     public partial class Champion_League_Football_AlkhimovichContext : DbContext
     {
@@ -77,10 +77,6 @@ namespace FL
                 entity.Property(e => e.GdAccountDifference).HasColumnName("GD(ACCOUNT DIFFERENCE)");
 
                 entity.Property(e => e.GfBallsScored).HasColumnName("GF(BALLS SCORED)");
-
-                entity.Property(e => e.GroupId)
-                    .HasColumnType("CHAR (4)")
-                    .HasColumnName("GROUP_ID");
 
                 entity.Property(e => e.Loses).HasColumnName("LOSES");
 
