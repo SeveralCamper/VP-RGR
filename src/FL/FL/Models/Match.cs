@@ -12,7 +12,7 @@ namespace FL
         }
 
         public string MatchId { get; set; } = null!;
-        public byte[]? Date { get; set; }
+        public string? Date { get; set; }
         public string FirstTeam { get; set; } = null!;
         public string SecondTeam { get; set; } = null!;
         public long FirstTeamResault { get; set; }

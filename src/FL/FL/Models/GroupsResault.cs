@@ -6,7 +6,7 @@ namespace FL
     public partial class GroupsResault
     {
         public string GroupsTeamResId { get; set; } = null!;
-        public long? Team { get; set; }
+        public string? Team { get; set; }
         public long? Place { get; set; }
         public long? GamesPlayed { get; set; }
         public long? Wins { get; set; }

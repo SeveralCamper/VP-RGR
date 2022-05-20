@@ -102,21 +102,16 @@ namespace FL
                     .HasColumnName("MATCH_ID");
 
                 entity.Property(e => e.Date)
-                    .HasColumnType("DATE")
                     .HasColumnName("DATE")
                     .HasDefaultValueSql("2021 - 1 - 1");
 
-                entity.Property(e => e.FirstTeam)
-                    .HasColumnType("CHAR")
-                    .HasColumnName("FIRST_TEAM");
+                entity.Property(e => e.FirstTeam).HasColumnName("FIRST_TEAM");
 
                 entity.Property(e => e.FirstTeamResault)
                     .HasColumnType("INTEGER (2)")
                     .HasColumnName("FIRST_TEAM_RESAULT");
 
-                entity.Property(e => e.SecondTeam)
-                    .HasColumnType("CHAR")
-                    .HasColumnName("SECOND_TEAM");
+                entity.Property(e => e.SecondTeam).HasColumnName("SECOND_TEAM");
 
                 entity.Property(e => e.SecondTeamResault)
                     .HasColumnType("INTEGER (2)")
