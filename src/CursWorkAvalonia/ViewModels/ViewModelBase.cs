@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FL.ViewModels
+namespace CursWorkAvalonia.ViewModels
 {
     public class ViewModelBase : ReactiveObject
     {
