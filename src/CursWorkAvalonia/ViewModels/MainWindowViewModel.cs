@@ -91,6 +91,23 @@ namespace CursWorkAvalonia.ViewModels
         {
             Content = new SQLRequestViewModel();
         }
+
+        public void DeleteGroup(Group entity) => Group.Remove(entity);
+        public void DeleteGroupsResault(GroupsResault entity) => GroupsResault.Remove(entity);
+        public void DeleteMatch(Match entity) => Match.Remove(entity);
+        public void DeleteQuarter(Quarter entity) => Quarter.Remove(entity);
+        public void DeleteQuartersResault(QuartersResault entity) => QuartersResault.Remove(entity);
+        public void DeleteTeam(Team entity) => Team.Remove(entity);
+
+        public void CreateGroup() => Group.Add(new Group() { MatchId = "new", GroupId = "new", GroupNum = "A" });
+        public void CreateGroupsResault() => GroupsResault.Add(new GroupsResault() { GroupsTeamResId = "new", Team = "new", Place = 0, GamesPlayed = 0, Wins = 0, Draws = 0, Loses = 0,
+            GfBallsScored = 0, GaBallsConceded = 0, GdAccountDifference = 0, PtsPoints = 0});
+        public void CreateMatch() => Match.Add(new Match() { MatchId = "new", Date = "0000-00-00", FirstTeam = "new", SecondTeam = "new", FirstTeamResault = 0,
+            SecondTeamResault = 0, WhoWon = 0 });
+        public void CreateQuarter() => Quarter.Add(new Quarter() { QuartersId = "new", MatchId = "new", QuartersNum = 0});
+        public void CreateQuartersResault() => QuartersResault.Add(new QuartersResault() { QuartersTeamResId = "new", Teams = "new", Place = 0, GamesPlayed = 0, Wins = 0,
+        Draws = 0, Loses = 0, GfBallsScored = 0, GaBallsConceded = 0, GdAccountDifference = 0, PtsPoints = 0});
+        public void CreateTeam() => Team.Add(new Team { TeamName = "new", Goalkeepers = "new", Defenders = "new", Midfielders = "new", Fowards = "new" });
         public void SQLRequestRun()
         {
             
