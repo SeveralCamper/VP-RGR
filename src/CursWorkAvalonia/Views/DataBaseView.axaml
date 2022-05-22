@@ -8,7 +8,7 @@
 			 Background="Gray">
 	<Grid RowDefinitions="20*,*">
 		<TabControl Grid.Column="0" Grid.Row="0" BorderThickness="3" Background="LightGray">
-			<TabItem Header="Group" VerticalContentAlignment="Center" BorderBrush="Black" Background="LightGray" BorderThickness="0.5" IsSelected="True">
+			<TabItem Header="Group" VerticalContentAlignment="Center" BorderBrush="Black" Background="LightGray" BorderThickness="0.5">
 				<Grid RowDefinitions="20*,*">
 					<Grid Grid.Row="0">
 						<DataGrid BorderBrush="Black" Background="LightGray" Items="{Binding $parent[Window].DataContext.Group}" AutoGenerateColumns="False">
