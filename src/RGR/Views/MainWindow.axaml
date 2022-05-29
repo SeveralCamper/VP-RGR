@@ -1,0 +1,56 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RGR.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:RGR.Views"
+        xmlns:model="using:RGR.Models"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="RGR.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AlkhimovichCursWork">
+  
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+  
+  <Grid RowDefinitions="50, 40, *">
+    <Grid ColumnDefinitions="100, 100, 100, 200" Grid.Row="0" Margin="0 0 0 0" Background="Gray">
+      <Button Content="Add Row" Command="{Binding AddRow}" BorderBrush="Black" Background="LightGray"/>
+      <Button Content="Delete Row" Command="{Binding DeleteRows}" Grid.Column="1" BorderBrush="Black" Background="LightGray"/>
+      <Button Content="Save" Command="{Binding OnClick}" Grid.Column="2" BorderBrush="Black" Background="LightGray"/>
+      <Button Content="Query Manager" Click="showQueryWindow" Grid.Column="3" BorderBrush="Black" Background="LightGray"/>
+    </Grid>
+
+    <ListBox Items="{Binding Tables}" SelectedItem="{Binding SelectedTable}" SelectionChanged="OnSelect" x:Name="myTabs" Grid.Row="1" BorderThickness="1" BorderBrush="Black" Background="LightGray">
+      <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal" Spacing="10" Background="LightGray"/>
+        </ItemsPanelTemplate>
+      </ListBox.ItemsPanel>
+      
+      <ListBox.DataTemplates>
+        <DataTemplate DataType="{x:Type model:MyQuery}">
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding TableName}" />
+            <Button Click="deleteQuer" CommandParameter="{Binding}">
+
+              <Image Source="/Assets/close.png" Height="10"/>
+            </Button>
+          </StackPanel>
+        </DataTemplate>
+        <DataTemplate>
+          <TextBlock Text="{Binding TableName}" />
+        </DataTemplate>
+      </ListBox.DataTemplates>
+    </ListBox>
+    <Border BorderBrush="Black" BorderThickness="1" Background="LightGray" Grid.Row="2">
+      <DataGrid Items="{Binding SelectedTable.Rows}" Background="LightGray" x:Name="dGrid" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" IsReadOnly="False" BorderThickness="1" BorderBrush="Black">
+        
+      </DataGrid>
+    </Border>
+  </Grid>
+
+</Window>
